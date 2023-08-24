@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-24T14:05:23 IST" name="Surefire suite" finished-at="2023-08-24T14:05:44 IST" duration-ms="21502">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@342c38f8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2023-08-24T14:05:23 IST" name="Surefire test" finished-at="2023-08-24T14:05:44 IST" duration-ms="21502">
+      <class name="runner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@342c38f8]" started-at="2023-08-24T14:05:23 IST" name="setUpClass" finished-at="2023-08-24T14:05:23 IST" duration-ms="170" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7df6d663]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@342c38f8]" started-at="2023-08-24T14:05:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-24T14:05:31 IST" duration-ms="8372" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful Login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login to the Application"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Failed due to unccessful Logged in message ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Failed due to unccessful Logged in message 
+at org.testng.Assert.fail(Assert.java:110)
+at stepDefinitions.login_stepDeff.user_is_navigated_to_home_page(login_stepDeff.java:80)
+at ✽.User is navigated to home page(file:///C:/Users/Sanjay%20Prasad/eclipse-workspace/allurecucumberProject2/src/test/resources/features/loginPage.feature:10)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@342c38f8]" started-at="2023-08-24T14:05:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-24T14:05:35 IST" duration-ms="3739" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Un-Successful Login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login to the Application"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@342c38f8]" started-at="2023-08-24T14:05:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-24T14:05:40 IST" duration-ms="5020" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Un-Successful Login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login to the Application"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@342c38f8]" started-at="2023-08-24T14:05:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-24T14:05:44 IST" duration-ms="4139" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check Data Table"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login to the Application"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@342c38f8]" started-at="2023-08-24T14:05:44 IST" name="tearDownClass" finished-at="2023-08-24T14:05:44 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.TestRunner -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
