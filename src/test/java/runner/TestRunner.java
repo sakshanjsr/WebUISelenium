@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features = "src\\test\\resources\\features",
 		glue = "stepDefinitions",
-		tags = ("@Login"),
+		tags = ("@Login , @CheckHomePage"),
 		plugin = {"pretty" , "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
 		monochrome = true
 	)
