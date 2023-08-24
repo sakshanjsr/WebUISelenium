@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Validate Home Page&quot;, &quot;Check Home Page&quot;)">runScenario("Validate Home Page", "Check Home Page")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,11 +115,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check Data Table&quot;, &quot;Login to the Application&quot;)">runScenario("Check Data Table", "Login to the Application")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Successful Login&quot;, &quot;Login to the Application&quot;)">runScenario("Successful Login", "Login to the Application")</a> <!-- method navigator-link -->
@@ -121,6 +130,11 @@
                         <a href="#" panel-name="suite-Suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Un-Successful Login&quot;, &quot;Login to the Application&quot;)">runScenario("Un-Successful Login", "Login to the Application")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="runner.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Check Data Table&quot;, &quot;Login to the Application&quot;)">runScenario("Check Data Table", "Login to the Application")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -133,22 +147,36 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">runner.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Validate Home Page&quot;, &quot;Check Home Page&quot;)">
+                  </a> <!-- runScenario("Validate Home Page", "Check Home Page") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Validate Home Page","Check Home Page")</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Helloo] but found [Hello]
+	at pagess.homePage.checkHelloTxt(homePage.java:40)
+	at stepDefinitions.checkHomePage_stepDefs.the_user_validate_page_hello(checkHomePage_stepDefs.java:36)
+	at ✽.The user validate page hello(file:///C:/Users/Sanjay%20Prasad/eclipse-workspace/allurecucumberProject2/src/test/resources/features/checkHomePage.feature:9)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">runner.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Check Data Table&quot;, &quot;Login to the Application&quot;)">
-                  </a> <!-- runScenario("Check Data Table", "Login to the Application") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Check Data Table","Login to the Application")</span>
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Successful Login&quot;, &quot;Login to the Application&quot;)">
@@ -175,6 +203,16 @@
                   </a> <!-- runScenario("Un-Successful Login", "Login to the Application") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Un-Successful Login","Login to the Application")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Check Data Table&quot;, &quot;Login to the Application&quot;)">
+                  </a> <!-- runScenario("Check Data Table", "Login to the Application") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Check Data Table","Login to the Application")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -241,28 +279,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'runner.TestRunner')
-data.setCell(0, 3, 12064);
+data.setCell(0, 3, 8211);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'runner.TestRunner')
-data.setCell(1, 3, 4388);
+data.setCell(1, 3, 5716);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'runner.TestRunner')
-data.setCell(2, 3, 3679);
+data.setCell(2, 3, 5513);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'runner.TestRunner')
-data.setCell(3, 3, 3594);
+data.setCell(3, 3, 5137);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'runScenario')
+data.setCell(4, 2, 'runner.TestRunner')
+data.setCell(4, 3, 3794);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -290,28 +332,34 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@5c30decf)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@2c955487)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Validate Home Page", "Check Home Page")</span>
+                <span class="method-start">398 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">runScenario("Successful Login", "Login to the Application")</span>
-                <span class="method-start">362 ms</span>
+                <span class="method-start">8628 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Un-Successful Login", "Login to the Application")</span>
-                <span class="method-start">12441 ms</span>
+                <span class="method-start">14143 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Un-Successful Login", "Login to the Application")</span>
-                <span class="method-start">16036 ms</span>
+                <span class="method-start">19299 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Check Data Table", "Login to the Application")</span>
-                <span class="method-start">20425 ms</span>
+                <span class="method-start">25032 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">24124 ms</span>
+                <span class="method-start">28830 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
