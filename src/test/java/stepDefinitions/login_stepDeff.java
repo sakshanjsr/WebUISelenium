@@ -73,7 +73,7 @@ public class login_stepDeff extends baseClass{
 	    // Write code here that turns the phrase above into concrete actions
 		WebElement msg = driver.findElement(By.cssSelector(".post-title"));
 		String loginMsg = msg.getText();
-		if(loginMsg.matches("Logged In Successfullyyy")) {
+		if(loginMsg.matches("Logged In Successfully")) {
 			System.out.println("Logged In Successfully");
 		}else {
 			System.out.println("ERROR");

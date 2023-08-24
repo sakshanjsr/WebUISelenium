@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: runner.TestRunner
--------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 22.061 s <<< FAILURE! - in runner.TestRunner
-runScenario(runner.TestRunner)  Time elapsed: 8.389 s  <<< FAILURE!
-java.lang.AssertionError: Failed due to unccessful Logged in message 
-
