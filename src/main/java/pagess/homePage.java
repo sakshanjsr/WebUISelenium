@@ -37,7 +37,7 @@ public class homePage {
 	public  void checkHelloTxt() {
 		highlightElement.highlightElementRed(helloTxt);
 		String txt = helloTxt.getText();
-		assertEquals(txt, "Hello");
+		assertEquals(txt, "Helloo");
 	}
 	
 
