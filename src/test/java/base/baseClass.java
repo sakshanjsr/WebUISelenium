@@ -7,6 +7,8 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -24,6 +26,7 @@ public class baseClass {
 		String environment = System.getProperty("environment");
 		//String environment = "Q2";
 		System.out.println("Environment Selected : "+environment);
+
 
 //>>>>>>>>> Load the property file after getting the env details from above
 		try {
@@ -51,7 +54,7 @@ public class baseClass {
 //>>>>>>>>>>> Provide implicit wait on global level
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
-		
+		System.out.println("Hello Sonar");
 		return driver;
 	
 	}
@@ -60,3 +63,7 @@ public class baseClass {
 		
 
 }
+
+
+
+
